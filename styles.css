@@ -1,0 +1,360 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Sriracha&display=swap');
+
+html {
+  --header: 56px;
+  --body_width: 970px;
+  --sidebar: 360px;
+  --container_width: 680px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  z-index: 0;
+  background-color: rgba(240, 242, 245, 1);
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  min-height: var(--header);
+  background-color: white;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  box-shadow: 5px 3px 5px rgba(200, 200, 200, 0.3);
+}
+
+.navigation {
+  height: var(--header);
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation.start {
+  width: 320px;
+  margin: 0px 16px 0px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.navigation.start i.fa-brands.fa-facebook {
+  transform: scale(2.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(44, 100, 246, 1);
+}
+
+.left-search  {
+  width: 80%;
+  height: 40px;
+  margin: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.item-glass {
+  width: 40px;
+  height: 40px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(240, 242, 245, 1);
+}
+
+.navigation input {
+  width: 80%;
+  height: 100%;
+  border: none;
+  outline: none;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+  padding: 0px 12px 0px 0px;
+  background-color: rgba(240, 242, 245, 1);
+}
+
+@media (max-width: 540px) {
+  .left-search {
+    justify-content: flex-start;
+  }
+  .item-glass{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(240, 242, 245, 1);
+  }
+  .navigation input {
+    display: none;
+  }
+}
+
+.navigation.center {
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4px;
+}
+
+@media (max-width: 850px) {
+  .navigation.center {
+    display: none;
+  }
+}
+
+.center {
+  width: 20%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(101, 103, 107, 1);
+}
+
+.center i.fa-solid {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.center i.fa-solid:hover {
+  cursor: pointer;
+  width: 90%;
+  height: 90%;
+  border-radius: 5px;
+  color: rgba(44, 100, 246, 1); 
+  background-color: rgba(240, 242, 245, 1);
+}
+
+.center.house {
+  border-bottom: 3px solid rgba(44, 100, 246, 1);
+  color: rgba(44, 100, 246, 1); 
+}
+
+.navigation.end {
+  width: 320px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin: 0px 16px;
+  gap: 8px;
+}
+
+.end {
+  min-width: 40px;
+  height: 80%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.end i.fa-solid {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(228, 230, 234, 1);
+}
+
+.end i.fa-solid:hover {
+  cursor: pointer;
+}
+
+/* Finish header */
+
+main {
+  min-height: calc(100vh - var(--header));
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar-left {
+  width: var(--sidebar);
+  min-height: 100vh - var(--header);
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+  .sidebar-left {
+    display: none;
+  }
+}
+
+.box-left {
+  position: fixed;
+  width: var(--sidebar);
+  min-height: 830px;
+  margin: 60px 0px 0px 0px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-top {
+  height: 50%;
+  margin: 0px 12px;
+  border-bottom: 1px solid rgb(194, 195, 199);
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  width: 95%;
+  margin: 4px;
+  padding: 4px;
+  gap: 8px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.list:hover {
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: rgba(228, 230, 234, 1);
+}
+
+.list i.fa-solid {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.list i.fa-duotone {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+i.fa-regular {
+  transform: scale(1.5);
+}
+
+.detail {
+  width: 80%;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.box-mid {
+  height: 35%;
+  margin: 0px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.box-bottom {
+  height: 5%;
+  font-size: 14px;
+  margin: 12px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: rgba(100, 106, 115, 1);
+}
+
+/* Finish sidebar */
+
+.body-main {
+  width: var(--body_width);
+  height: auto;
+  overflow-y: auto;
+  padding: 8px 32px;
+  display: flex;
+  justify-content: center;
+
+}
+
+.container {
+  width: var(--container_width);
+  margin-top: 60px;
+}
+
+.sidebar-right {
+  width: var(--sidebar);
+  min-height: 100vh - var(--header);
+  display: flex;
+  flex-direction: column;
+}
+
+.box-right {
+  position: fixed;
+  width: var(--sidebar);
+  height: 830px;
+  overflow-y: scroll;
+  margin: 60px 0px 0px 0px;
+  gap: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.advertise {
+  height: 140px;
+  margin: 0px 8px 0px 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+}
+
+.pic img{
+  width: 40%;
+  border-radius: 10px;
+}
+
+.channal {
+  padding-left: 12px;
+  flex-wrap: wrap;
+}
+
+.status {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: rgba(84, 160, 86, 1);
+}
+
+.buttom:hover {
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(228, 230, 234, 1);
+}
